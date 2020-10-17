@@ -13,8 +13,17 @@
 
 from setuptools import setup, find_packages  # noqa: H301
 
+short_desc = "This is a python client for the sure_tosca REST service"
+
+try:
+    with open("./README.md", "r") as rm:
+        long_description = rm.read()
+except FileNotFoundError:
+    long_description = short_desc
+
+
 NAME = "sure_tosca_client"
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 # To install the library, run the following
 #
 # python setup.py install
@@ -23,26 +32,44 @@ VERSION = "1.0.0"
 # http://pypi.python.org/pypi/setuptools
 
 REQUIRES = [
-"certifi==2019.11.28",
+"certifi==2020.4.5.1",
 "six==1.14.0",
-# "python_dateutl==2.5.3",
-"setuptools==46",
+"python_dateutl==2.5.3",
+"setuptools==46.1.3",
 "urllib3==1.25.8",
 "numpy==1.18.2"
 ]
-    
+
+
+
+
+
+
+
 
 setup(
     name=NAME,
     version=VERSION,
-    description="tosca-sure",
+    description=short_desc,
     author_email="S.Koulouzis@uva.nl",
-    url="",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/qcdis-sdia/sdia-sure_tosca-client",
     keywords=["Swagger", "tosca-sure"],
     install_requires=REQUIRES,
     packages=find_packages(),
     include_package_data=True,
-    long_description="""\
-    TOSCA Simple qUeRy sErvice (SURE).   # noqa: E501
-    """
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: Apache Software License",
+        "Operating System :: OS Independent",
+    ],
+    python_requires='>=3.7'
 )
+
+
+
+
+
+
+
