@@ -1,3 +1,4 @@
+![Upload Python Package](https://github.com/qcdis-sdia/sdia-sure_tosca-client/workflows/Upload%20Python%20Package/badge.svg)
 # sure_tosca_client
 TOSCA Simple qUeRy sErvice (SURE). 
 
