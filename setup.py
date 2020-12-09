@@ -23,7 +23,7 @@ except FileNotFoundError:
 
 
 NAME = "sure_tosca_client"
-VERSION = "1.0.1"
+VERSION = "1.0.6"
 # To install the library, run the following
 #
 # python setup.py install
@@ -34,12 +34,10 @@ VERSION = "1.0.1"
 REQUIRES = [
 "certifi==2020.4.5.1",
 "six==1.14.0",
-"python_dateutl==2.5.3",
 "setuptools==46.1.3",
 "urllib3==1.25.8",
 "numpy==1.18.2"
 ]
-
 
 
 
